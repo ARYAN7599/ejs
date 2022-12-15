@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <%- include('./head'); %>
+  </head>
+  <body>
+    <header><%- include('./header'); %></header>
+
+    <main>
+      <div class="jumbotron">
+        <h1>This is great</h1>
+        <p>Welcome to templating using EJS</p>
+        <div style="flex-direction: row">
+          <div>
+            <% articles.forEach(p => { %>
+            <li>
+              Hi, I'm <%= p.author %>. I'm <%= p.title %> years old. On <%=
+              p.date %> date.
+            </li>
+            <% }); %>
+          </div>
+          <div>
+            <% for(var i=0; i<articles.length; i++){ %>
+              <h1><%= articles[i].title %></h1>
+              <h3><%= articles[i].author %></h3>
+              <h4><%= articles[i].date %></h4>
+              <% } %>
+            </articles.length;>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><%- include('./footer'); %></footer>
+
+    <script
+      id="ze-snippet"
+      src="https://static.zdassets.com/ekr/snippet.js?key=598ef35a-755a-4c75-a2f2-10a7b9e3035d"
+    ></script>
+  </body>
+</html>
