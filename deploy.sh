@@ -1,5 +1,5 @@
 #!/bin/sh
-ssh root@159.65.147.222<<EOF
+<<EOF
    cd /var/www/html/
    git pull origin main
    npm install --production
