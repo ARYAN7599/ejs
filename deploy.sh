@@ -1,4 +1,5 @@
 #!/bin/sh
+chmod +x deploy.sh
 <<EOF
    cd /var/www/html/
    git pull origin main
